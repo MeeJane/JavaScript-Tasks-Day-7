@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks Day-7</title>
+</head>
+
+<body>
+    <!--Task-1-->
+    <h4>1.Convert "javascript" to uppercase.</h4>
+    <script>
+        let word = "javascript";
+        let upper =word.toUpperCase();
+
+        console.log(upper);
+        document.write(upper);
+        
+
+    </script>
+
+    <!-- Task-2 -->
+    <h4>2.Convert "HELLO WORLD" to lowercase. </h4>
+    <script>
+        let string = "HELLO WORLD";
+        let lower = string.toLowerCase();
+
+        console.log(lower);
+        document.write(lower);
+
+    </script>
+
+    <!-- Task-3 -->
+    <h4>3.Extract "Script" from "JavaScript" using slice(). </h4>
+    <script>
+        let script = "JavaScript";
+        let sliced_script = script.slice(4)
+
+        document.write(sliced_script);
+    </script>
+
+
+    <!-- Task-4 -->
+    <h4>4.Replace "bad" with "good" in "This is a bad day"</h4>
+    <script>
+       let sentence = "This is a bad day";
+       let replaced_sent = sentence.replace("bad","good");
+       document.write(replaced_sent);
+
+    </script>
+
+
+    <!-- Task-5 -->
+    <h4>5.Check if "Coding" is present in "I love Coding!". </h4>
+    <script>
+        let idea = "I love Coding!";
+        let check = idea.includes("Coding")
+
+        document.write(check);
+    </script>
+
+
+    <!-- Task-6 -->
+    <h4>6.Find the position of "world" in "Hello world!".  </h4>
+    <script>
+        let text = "Hello world!";
+        let position = text.indexOf("world");
+        document.write(position);
+    </script>
+
+
+    <!-- Task-7 -->
+    <h4>7.Remove spaces from " Trim me ".</h4>
+    <script>
+       let msg = "  Trim me  ";
+       let trimmed_msg = msg.trim();
+       document.write(msg);
+
+    </script>
+
+
+    <!-- Task-8 -->
+    <h4>8.Count the number of characters in "Programming".  </h4>
+    <script>
+        let chars = "Programming";
+        let count = chars.length;
+
+        document.write(count);
+    </script>
+
+
+    <!-- Task-9 -->
+    <h4>9.Check if "apple" starts with "a".</h4>
+    <script>
+       let fruit = "apple";
+       let check_a = fruit.startsWith("a");
+
+       document.write(check_a);
+
+    </script>
+
+
+    <!-- Task-10 -->
+    <h4>10.Split "banana,apple,orange" into an array.</h4>
+    <script>
+        let fruits = "banana,apple,orange";
+        let fruits_array = fruits.split(",");
+
+        console.log(fruits);
+        console.log(fruits_array);
+
+        document.write(fruits,"<br>");
+        document.write(fruits_array);
+    </script>
+
+
+    <!-- Task-11 -->
+    <h4>11.Repeat "JS " three times. </h4>
+    <script>
+        let text_11 = "JS";
+        let repeated_text = text_11.repeat(3);
+        document.write(repeated_text);
+
+    </script>
+
+
+    <!-- Task-12 -->
+    <h4>12.Concatenate "Web" and " Development".   </h4>
+    <script>
+        let str_1 = "Web";
+        let str_2 = " Development";
+        let string_result = str_1 + str_2;
+        let string_concat = str_1.concat(str_2);
+        document.write(string_concat);
+        
+
+    </script>
+
+
+    <!-- Task-13 -->
+    <h4>13.Validate if "user123" has at least 5 characters.</h4>
+    <script>
+        let user_name = "user123";
+        let validity_check = user_name.length >=5 ? " a valid User Name" : "User name too short";
+        document.write("'user123' is ",validity_check);
+    </script>
+
+
+    <!-- Task-14 -->
+    <h4>14.Check if a string starts with a specific substring using .startsWith()</h4>
+    <script>
+        let text_14_2 = "JavaScript is fun" ;
+        let text_14_1 = "Learning JavaScript" ;
+        let text_14_1_check = text_14_1.startsWith("Java");
+        let text_14_2_check = text_14_2.startsWith("Java");
+
+        console.log(text_14_1_check);
+        console.log(text_14_2_check);
+
+        document.write("If the string '",text_14_1,"' starts with 'Java' :",text_14_1_check,"<br>");
+        document.write("If the string '",text_14_2,"' starts with 'Java' :",text_14_2_check);     
+
+    </script>
+
+
+    <!-- Task-15 -->
+    <h4>15.Check if a string ends with a specific substring using .endsWith()</h4>
+    <script>
+        let text_15_2 = "JavaScript is fun" ;
+        let text_15_1 = "Learning JavaScript" ;
+        let text_15_1_check = text_15_1.endsWith("fun");
+        let text_15_2_check = text_15_2.endsWith("fun");
+
+        console.log(text_15_1_check);
+        console.log(text_15_2_check);
+
+        document.write("If the string '",text_15_1,"' ends with 'fun' :",text_15_1_check,"<br>");
+        document.write("If the string '",text_15_2,"' ends with 'fun' :",text_15_2_check);  
+     
+    </script>
+
+
+    <!-- Task-16 -->
+    <h4>16.Use .includes() to check for a word in a sentence</h4>
+    <script>
+        let text_16 = "JavaScript is a powerful language";
+        let text_16_check = text_16.includes("powerful");
+
+        console.log(text_16_check);
+        document.write("If the word 'powerful' is in the string '",text_16,"' :",text_16_check);
+
+
+
+    </script>
+
+
+    <!-- Task-17 -->
+    <h4>17.Convert a full name to initials (e.g., "John Doe" → "J.D.")</h4>
+    <script>
+        function initial(fullName){
+            let names = fullName.split(" ");
+            let ops = names.map (name=> name.charAt(0).toUpperCase()+".");
+            let result = ops.join("")
+            return ("The Name : "+fullName+"<br>"+"The Initials : "+result);
+        }
+        document.write(initial("Mydheen Jasmine"));
+        
+       
+
+    </script>
+
+
+    <!-- Task-18 -->
+    <h4>18.Count how many times a letter appears in a string</h4>
+    <script>
+        count = 0;
+        function count_letter(string,letter){
+            for(char of string){
+                if(char.toLowerCase() == letter.toLowerCase()){
+                    count++
+                }
+
+            }
+            return "The letter '"+letter+"' comes "+count+ " times in the string '"+string+"'."
+            
+        }
+        document.write(count_letter("It is A JavaScript Programming","a"))
+    </script>
+
+
+    <!-- Task-19 -->
+    <h4>19.Find the longest word in a sentence</h4>
+    <script>
+        let sentence_19 = "JavaScript makes coding interesting";
+        let words = sentence_19.split(" ");
+        let lengths_words = words.map(word => word.length);
+        let max_value = Math.max(...lengths_words);
+        let words_lengths = {};
+        for (let word of words){
+            words_lengths[word] = word.length;
+        }
+        let longest_word = "";
+        for (let word in words_lengths){
+            if(words_lengths[word] == max_value){
+                longest_word = word;
+                break;
+            }
+
+        }
+
+        document.write("The longest word in the sentence 'JavaScript makes coding interesting' is '",longest_word,"'.");
+
+
+    </script>
+
+
+    <!-- Task-20 -->
+    <h4>20.Capitalize the first letter of each word in a sentence</h4>
+    <script>
+        sentence_20 = "javaScript iS very fun to leaRn";
+        words = sentence_20.split(" ")
+        let capital_words = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+        let capitalized_sentence = capital_words.join(" ");
+        document.write("Original sentence : '",sentence_20,"'.","<br>");
+
+        document.write("Capitalized sentence : '",capitalized_sentence,"'.");
+        
+            
+
+    </script>
+
+
+</body>
+
+</html>
